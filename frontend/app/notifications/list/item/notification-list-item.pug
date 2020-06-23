@@ -1,0 +1,7 @@
+.twake-notification(ng-click="$ctrl.open()")
+  .title
+    span {{ $ctrl.notification.title }}
+  .time
+    span(am-time-ago="$ctrl.notification.date")
+  .content
+    span {{ $ctrl.notification.content }}

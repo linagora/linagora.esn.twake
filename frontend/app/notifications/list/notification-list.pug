@@ -1,0 +1,6 @@
+.twake-notification-list
+  .twake-notification-list-item(ng-repeat="item in $ctrl.elements | orderBy: '-date'" ng-if="$ctrl.elements.length > 0")
+    twake-notification-list-item(notification="item", hide-popover="$ctrl.hidePopover()")
+  .twake-notification-list-empty(ng-if="!$ctrl.elements.length")
+    i.mdi.mdi-message-alert
+    .message #{__("You do not have any messages")}
