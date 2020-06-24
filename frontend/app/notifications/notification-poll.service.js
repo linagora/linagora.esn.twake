@@ -10,7 +10,8 @@
 
     return {
       start: start,
-      stop: stop
+      stop: stop,
+      fetch: fetch
     };
 
     function stop() {

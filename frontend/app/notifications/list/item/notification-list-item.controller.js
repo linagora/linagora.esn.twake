@@ -4,7 +4,7 @@
   angular.module('linagora.esn.twake')
     .controller('TwakeNotificationListItemController', TwakeNotificationListItemController);
 
-  function TwakeNotificationListItemController($window, TwakeService) {
+  function TwakeNotificationListItemController($window) {
     var self = this;
 
     self.open = function() {
