@@ -21,11 +21,19 @@
             return {
               unread: result.unread,
               notifications: (result.notifications || []).map(function(notification) {
+                var url;
+
+                try {
+                  url = new URL(notification.url);
+                } catch (err) {
+                  url = new URL(notification.url, twakeUrl);
+                }
+
                 return {
                   title: notification.title,
                   content: notification.content,
                   date: notification.date * 1000,
-                  url: new URL(notification.url, twakeUrl)
+                  url: url
                 };
               })
             };
